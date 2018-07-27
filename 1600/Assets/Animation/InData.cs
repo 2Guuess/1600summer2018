@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class HealthPowerUp : PowerUpBase
+public class InData : ScriptableObject
 {
-
+    public int Value;
 }

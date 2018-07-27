@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu()]
-public class begin : MonoBehaviour
+public class begin : ScriptableObject
 {
     public float speed = 5f;
     public float Health;
@@ -19,7 +19,7 @@ public class begin : MonoBehaviour
 	void Update ()
     {
 
-        transform.Rotate(speed, 0, 0);
+
 
 
 	}
