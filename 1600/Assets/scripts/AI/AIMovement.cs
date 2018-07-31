@@ -6,7 +6,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class AIMovement : MonoBehaviour
 {
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
 
     public Transform Destination;
     public AIControl control;
@@ -20,5 +20,13 @@ public class AIMovement : MonoBehaviour
     private void Update()
     {
         agent.destination = Destination.position;   
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        other.CompareTag("Wall");
+        {
+            Destroy(gameObject);
+        }
     }
 }
