@@ -15,14 +15,24 @@ public class PlayerController : MonoBehaviour
 
     void Update ()
     {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+        
+=======
+>>>>>>> master
         Touch myTouch = Input.GetTouch(0);
         Touch[] touches = Input.touches;
         for(int i = 0; i < Input.touchCount; i++)
         {
             //Do Something
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
+>>>>>>> master
 
         if(Input.GetMouseButtonDown(0))
         {
