@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-using System;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
@@ -13,28 +14,19 @@ public class PlayerController : MonoBehaviour
         cam = FindObjectOfType<Camera>();
     }
 
-    void Update ()
+    void Update()
     {
-<<<<<<< HEAD
-        
-=======
-        Touch myTouch = Input.GetTouch(0);
-        Touch[] touches = Input.touches;
-        for(int i = 0; i < Input.touchCount; i++)
-        {
-            //Do Something
-        }
->>>>>>> master
 
-        if(Input.GetMouseButtonDown(0))
+
+        if (Input.GetMouseButtonDown(0))
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if(Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit))
             {
                 agent.SetDestination(hit.point);
             }
         }
-	}
+    }
 }
